@@ -1,0 +1,6 @@
+# Para cambiarse a la carpeta en donde se encuentran sus programas
+cd C:\Users\Erwin\Dropbox\Cursos\UAM\TALLER_R
+
+
+# Para compilar sus programas
+R CMD SHLIB ejemplo.c -o pred.dll

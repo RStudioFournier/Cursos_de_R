@@ -1,0 +1,122 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, mexico]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm} 
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Arnoldo Daniel Miranda Fournier }
+\title{Trabajo Final}
+\parindent = 0mm
+
+\title{\textbf{Generacion de Reportes Automaticos(R y Latex)\\ \begin{normalsize}
+\emph{}
+\end{normalsize}}}
+\author{\begin{normalsize}
+\textbf{Arnoldo Daniel Miranda Fournier}
+\end{normalsize}}
+\date{}
+
+\begin{document}
+
+
+\begin{titlepage}
+
+\vspace*{1.2in}
+
+\begin{center}
+\vspace*{-1in}
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=8cm]{Logo_UAM_I}
+\end{center}
+\end{figure}
+
+Maestr\'ia en Ciencias Matem\'aticas Aplicadas e Industriales\\
+\vspace*{0.15in}
+
+\vspace*{0.10in}
+\begin{large}
+Primer Taller de estudiantes UAM-I y  Usuarios  de R-2018\\
+\end{large}
+\vspace*{0.2in}
+\begin{Large}
+\textbf{Generaci\'on de Reportes Automaticos(R y Latex)} \\
+\end{Large}
+\vspace*{0.25in}
+\rule{80mm}{0.1mm}\\
+\vspace*{0.1in}
+\begin{large}
+Arnoldo Daniel Miranda Fournier\\
+\end{large}
+\vspace*{0.1in}
+\begin{large}
+18-P\\
+\end{large}
+\end{center}
+
+\end{titlepage}
+
+
+
+
+\begin{itemize}
+
+\item Muestra el codigo pero no los resultados: 
+
+
+<<echo=TRUE, results='hide'>>=
+1 + 1
+@
+
+\item Muestra solo los resultados:
+
+<<echo=FALSE, results='markup'>>=
+1 + 1
+@
+
+\item Muestra el codigo y los resultados:
+
+<<echo=TRUE, results='markup' >>=
+1 + 1
+@
+
+\item Muestra el codigo (sobre fondo gris) y los resultados (sin fondo gris):
+
+<<echo=TRUE, results='asis'  >>=
+1 + 1
+@
+
+\item Descarta los graficos
+
+<<echo=TRUE, results='markup', fig.keep='none' >>=
+x <- rnorm(5)
+print(x)
+boxplot(x)
+@
+
+\item No descarta el grafico
+
+<<echo=TRUE, results='markup', fig.keep='all' >>=
+x <- rnorm(50)
+boxplot(x)
+@
+
+\item No descarta el grafico y controla su tamaÃ±o y posicion:
+
+<<echo=TRUE, results='markup', fig.keep='all', fig.width=5 , fig.height=3 , fig.align='center' >>=
+x <- rnorm(50)
+boxplot(x)
+@
+
+\end{itemize}
+
+
+\begin
+
+
+\end{document}
